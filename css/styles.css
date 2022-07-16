@@ -1,7 +1,6 @@
 @media (min-width: 320px){
     html{
         font-family: 'TT Lakes Regular';
-        overflow-y: hidden;
     }
     
     .section__header{
@@ -9,9 +8,10 @@
     }
     
     .repair-block{
-        padding-bottom: 32px;
+        height: 154px;
         background: #F2F2F2;
     }
+
     
     .section__header__text{
         font-size: 1rem;
@@ -22,19 +22,30 @@
     
         color: #7E7E82;
     }
-    
-    .swiper-pagination{
-        position: relative !important;
-        bottom: -22px !important;
-    }
+   
 
     .swiper-pagination-bullet{
         width: 12px !important;
         height: 12px !important;
+        margin: 0 12px 0 0 !important;
         line-height: 12px;
         border-radius: 50% !important;
         background-color: #B5B6BC !important;
     }
+
+    .swiper-container{
+        height: 150px;
+        overflow-y: visible;
+        overflow-x: auto;
+
+        -ms-overflow-style: none;  
+        scrollbar-width: none;        
+    }
+
+    .swiper-container::-webkit-scrollbar {
+        display: none;
+    }
+
     .items__block{
         display: flex;
         justify-content: space-between;
@@ -53,7 +64,7 @@
     .repair-block__items::after{
         display: block;
         position: absolute;
-        top: 73px;
+        top: 57px;
         z-index: 1;
         content: "";
         right: 0px;
@@ -65,7 +76,12 @@
     }
 
     .wrapper{
-        padding: 1rem;
+        padding: 1rem 0 0 1rem;
+    }
+
+    .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
+        position: relative;
+        bottom: -16px !important;
     }
    
     .items__button{
@@ -74,27 +90,38 @@
         height: 40px;
         background-image: url(../img/go.svg);
     }
+
+    .swiper-wrapper{
+        height: auto !important;
+    }
 }
 
 @media (min-width: 768px) {
 
+    .repair-block{
+        height: 242px !important;
+    }
+    
     .repair-block__items{
         height: 180px;
         overflow-y: hidden;
     }
+
     .repair-block__items::after{
         display: none;
     }
+
     .items__wrapper{
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-start;
+        align-items: center;
         row-gap: 1rem;
         column-gap: 1.5rem;
     }
 
     .items__block{
-        min-width: 190px;
+        flex: 1 0 190px !important;
     }
     .repair-block__expand{
         display: block;
