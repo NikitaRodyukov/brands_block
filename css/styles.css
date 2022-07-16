@@ -1,6 +1,7 @@
 @media (min-width: 320px){
     html{
         font-family: 'TT Lakes Regular';
+        overflow-y: hidden;
     }
     
     .section__header{
