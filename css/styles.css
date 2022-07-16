@@ -1,0 +1,104 @@
+@media (min-width: 320px){
+    html{
+        font-family: 'TT Lakes Regular';
+    }
+    
+    .section__header{
+        background: linear-gradient(270deg, #F8F8F8 0%, #FFFFFF 98.61%);
+    }
+    
+    .repair-block{
+        padding-bottom: 32px;
+        background: #F2F2F2;
+    }
+    
+    .section__header__text{
+        font-size: 1rem;
+        line-height: 1.5rem;
+    
+        letter-spacing: -0.2px;
+        text-transform: uppercase;
+    
+        color: #7E7E82;
+    }
+    
+    .swiper-pagination{
+        position: relative !important;
+        bottom: -22px !important;
+    }
+
+    .swiper-pagination-bullet{
+        width: 12px !important;
+        height: 12px !important;
+        line-height: 12px;
+        border-radius: 50% !important;
+        background-color: #B5B6BC !important;
+    }
+    .items__block{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        min-height: 4.5rem;
+        max-width: 13rem;
+        padding: 0 1rem;
+        background: #FFFFFF;
+        border: 1px solid #EAEAEA;
+        border-radius: 6px;
+
+        background-color: #FFFFFF;
+    }
+
+    .repair-block__items::after{
+        display: block;
+        position: absolute;
+        top: 73px;
+        z-index: 1;
+        content: "";
+        right: 0px;
+
+        width: 1.5rem;
+        height: 4.5rem;
+
+        background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+    }
+
+    .wrapper{
+        padding: 1rem;
+    }
+   
+    .items__button{
+        content: '';
+        width: 40px;
+        height: 40px;
+        background-image: url(../img/go.svg);
+    }
+}
+
+@media (min-width: 768px) {
+
+    .repair-block__items{
+        height: 180px;
+        overflow-y: hidden;
+    }
+    .repair-block__items::after{
+        display: none;
+    }
+    .items__wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        row-gap: 1rem;
+        column-gap: 1.5rem;
+    }
+
+    .items__block{
+        min-width: 190px;
+    }
+    .repair-block__expand{
+        display: block;
+    }
+    .swiper-pagination{
+        display: none;
+    }
+}
