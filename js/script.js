@@ -95,7 +95,7 @@ expand.addEventListener('click', function(){
     expandText.innerHTML = 'Показать все';
     expandIcon.classList.remove('repair-block__expand__icon--rotated');
 
-    setTimeout(closeItems,2020);
+    setTimeout(closeItems,940);
   }
 
 

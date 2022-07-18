@@ -123,10 +123,6 @@
         height: auto;
     }
 
-    .repair-block__wrapper{
-        padding-bottom: 34px;
-    }
-
     .repair-block__items{
         margin-bottom: 1rem;
     }
@@ -142,7 +138,7 @@
     .items__wrapper{
         display: grid !important;
        grid-template-columns: repeat(3, 1fr);
-       max-height: 180px;
+       max-height: 164px;
        gap: 16px 24px;
        overflow: hidden;
        transition: all 1s !important;
