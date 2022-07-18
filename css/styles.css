@@ -89,18 +89,18 @@
     }
 
     .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
-        top: 174px;  
+        top: 195px;  
     }
 }
 
-@media (min-width: 353px){
+@media (min-width: 369px){
 
     .repair-block__items::after{
         top: 57px;
     }
 
     .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
-        top: 155px;  
+        top: 172px;  
     }
 
 }
