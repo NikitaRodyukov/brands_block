@@ -33,7 +33,7 @@
     .repair-block__items::after{
         display: block;
         position: absolute;
-        top: 57px;
+        top: 105px;
         z-index: 1;
         content: "";
         right: 0px;
@@ -96,7 +96,7 @@
 @media (min-width: 369px){
 
     .repair-block__items::after{
-        top: 57px;
+        top: 81px;
     }
 
     .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
