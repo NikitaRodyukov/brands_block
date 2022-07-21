@@ -8,13 +8,13 @@ let mySwiper;
 //////////////////////////////////////////////////////////////////
 const breakpointChecker = function() {
    // if larger viewport and multi-row layout needed
-   if ( breakpoint.matches === true ) {
+   if ( breakpoint.matches) {
       // clean up old instances and inline styles when available
       if ( mySwiper !== undefined ) mySwiper.destroy( true, true );
       // or/and do nothing
       return;
    // else if a small viewport and single column layout needed
-   } else if ( breakpoint.matches === false ) {
+   } else if (!breakpoint.matches) {
       // fire small viewport version of swiper
       return enableSwiper();
    }
@@ -51,16 +51,17 @@ const expandIcon = expand.querySelector('.repair-block__expand__icon');
 const brands = document.querySelectorAll('.items__block');
 const repairBlock = document.querySelector('.repair-block')
 const expandText = expand.querySelector('.repair-block__expand__text');
-const breakpoint768 = window.matchMedia( '(max-width:1119px)' );
-const breakpoint1120 = window.matchMedia( '(min-width:1120px)' );
 
-  if (breakpoint1120.matches === true){
+const breakpointTablet = window.matchMedia( '(min-width:768px)' );
+const breakpointDesktop = window.matchMedia( '(min-width:1120px)' );
+
+  if (breakpointDesktop.matches){
     for (let i = 0; i < 8; i++){
       brands[i].classList.add('items__block--show')
     }
   }
   
-  else if (breakpoint768.matches === true){
+  else if (breakpointTablet.matches){
     for (let i = 0; i < 6; i++){
       brands[i].classList.add('items__block--show')
     }
@@ -69,13 +70,13 @@ const breakpoint1120 = window.matchMedia( '(min-width:1120px)' );
 expand.addEventListener('click', function(){
   if (expand.classList.contains('repair-block__expand--false')){
 
-    if (breakpoint1120.matches === true){
+    if (breakpointDesktop.matches){
       for (let i = 8; i < brands.length; i++){
         brands[i].classList.add('items__block--show')
       }
     }
     
-    else if (breakpoint768.matches === true){
+    else if (breakpointTablet.matches){
       for (let i = 6; i < brands.length; i++){
         brands[i].classList.add('items__block--show')
       }
@@ -102,13 +103,13 @@ expand.addEventListener('click', function(){
 });
 
 let closeItems = function () {
-  if (breakpoint1120.matches === true){
+  if (breakpointDesktop.matches){
     for (let i = 8; i < brands.length; i++){
       brands[i].classList.remove('items__block--show')
     }
   }
   
-  else if (breakpoint768.matches === true){
+  else if (breakpointTablet.matches){
     for (let i = 6; i < brands.length; i++){
       brands[i].classList.remove('items__block--show')
     }
